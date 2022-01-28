@@ -1,0 +1,171 @@
+:root {
+    --link-color-alpha: 0.1;
+    --link-shadow-alpha: 0;
+}
+
+@font-face {
+    font-family: "Univia";
+    src: url(fonts/UniviaPro-Regular.otf);
+}
+
+body {
+    font-family: Univia, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #1b222a;
+}
+
+.bg_page_loaded {
+    background: #1b222a radial-gradient(circle at top left, rgba(122, 121, 146, 0.25) 0%, transparent 50%) no-repeat;
+    animation: bg_lighting 1.5s ease-out;
+    --link-color-alpha: 1;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    padding: 16px 0;
+}
+
+#home_title {
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: bolder;
+    padding: 1em;
+    color: #f0ffff;
+    transition: color 1s ease-in-out 1s;
+}
+
+#main_menu {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    position: sticky;
+    top: 0;
+}
+
+#main_menu a {
+    text-decoration: none;
+    font-size: large;
+    font-weight: bold;
+    color: #878f8f;
+    transition: color 1s ease-in-out 1s;
+}
+
+.lds-dual-ring {
+    display: inline-block;
+    visibility: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+}
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+
+main {
+    position: relative;
+    color: white;
+    padding: 4vh 10vw;
+    overflow-x: hidden;
+}
+
+main a {
+    color: white;
+}
+
+#main_menu a:hover {
+    text-shadow: 0 0 8px #b2b2b2;
+}
+
+.current_page_link {
+    color: white;
+    text-shadow: 0 0 8px #b2b2b2;
+}
+
+#blogposts {
+    list-style: none;
+}
+
+.blog_post {
+    background-color: #383f45;
+    box-shadow: 0 2px 8px #b2b2b2;
+    border-radius: 1em;
+}
+
+.blog_post a {
+    display: grid;
+    grid: auto auto auto / repeat(5, 1fr);
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+.blog_post img {
+    grid-area: 1 / 1 / 4 / 3;
+    width: 100%;
+    height: 100%;
+    border-radius: 1em 0 0 1em;
+}
+
+.blog_post h1 {
+    grid-area: 1 / 3 / 3 / 6;
+    margin: 0;
+    padding: 2%;
+    text-align: left;
+}
+
+.blog_post span {
+    grid-area: 3 / 3 / 4 / 6;
+    text-align: left;
+    padding: 2%;
+}
+
+footer {
+    background-color: #383f45;
+    padding: 4vh 2vw;
+    color: #c5c0c0;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer a {
+    text-decoration: none;
+    color: #c5c0c0;
+}
+
+footer a:hover {
+    color: white;
+}
+
+@keyframes bg_lighting {
+    from {
+        background-position: -100vw -100vh;
+    }
+    to {
+        background-position: 0 0;
+    }
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Blog | AniVerma17</title>
+        <link>/blog</link>
+        <description>Animesh's blog</description>
+        <copyright>(c) Animesh Verma</copyright>
+        <item>
+            <title>My journey with ALiAS : From a commit to the community</title>
+            <link>/blog/my-journey-with-alias</link>
+            <description>A brief journal of my journey with my college's FOSS developers' club.</description>
+            <pubdate>Fri, 28 Jan 2022 00:00:00 +0530</pubdate>
+        </item>
+    </channel>
+</rss>
