@@ -141,6 +141,7 @@ footer {
     color: #c5c0c0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 footer a {
