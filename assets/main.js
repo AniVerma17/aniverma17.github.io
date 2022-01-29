@@ -35,7 +35,6 @@ window.addEventListener("popstate", (event) => loadSection(event.state))
 function addHistoryState(path, isFullPageLoad) {
     let pathSegments = path.split("/").filter((s) => s !== "")
     let pageState = {section: pathSegments[0] ?? "", content: pathSegments[1]}
-    toggleCurrentLink(pageState.section)
     if (isFullPageLoad) {
         history.replaceState(pageState, "", path)
     } else {
@@ -46,6 +45,7 @@ function addHistoryState(path, isFullPageLoad) {
 
 function loadSection(pageState) {
     contentContainer.style.textAlign = pageState.content ? "left" : "center"
+    toggleCurrentLink(pageState.section)
     switch (pageState.section) {
         case "": case "index": case "index.html":
             loadPageWithMarkdown(pageComponents.home)

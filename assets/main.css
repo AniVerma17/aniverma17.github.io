@@ -47,12 +47,21 @@ header {
     top: 0;
 }
 
-#main_menu a {
+.link_page {
     text-decoration: none;
     font-size: large;
     font-weight: bold;
     color: #878f8f;
-    transition: color 1s ease-in-out 1s;
+    transition: color 1s ease;
+}
+
+.link_page:hover {
+    text-shadow: 0 0 8px #b2b2b2;
+}
+
+.current_page_link {
+    color: white;
+    text-shadow: 0 0 8px #b2b2b2;
 }
 
 .lds-dual-ring {
@@ -86,15 +95,6 @@ main {
 
 main a {
     color: white;
-}
-
-#main_menu a:hover {
-    text-shadow: 0 0 8px #b2b2b2;
-}
-
-.current_page_link {
-    color: white;
-    text-shadow: 0 0 8px #b2b2b2;
 }
 
 #blogposts {
