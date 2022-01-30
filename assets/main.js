@@ -2,7 +2,7 @@
 
 let pageComponents = {
     home : {
-        title : "AniVerma17 -> Animesh Verma",
+        title : "Animesh Verma -> AniVerma17",
         contentUrl : "content/home_page_content.md"
     },
     profile : {
@@ -44,16 +44,18 @@ function addHistoryState(path, isFullPageLoad) {
 }
 
 function loadSection(pageState) {
-    contentContainer.style.textAlign = pageState.content ? "left" : "center"
     toggleCurrentLink(pageState.section)
     switch (pageState.section) {
         case "": case "index": case "index.html":
+            contentContainer.style.textAlign = "center"
             loadPageWithMarkdown(pageComponents.home)
             break
         case "profile":
+            contentContainer.style.textAlign = "left"
             loadPageWithMarkdown(pageComponents.profile)
             break
         case "blog":
+            contentContainer.style.textAlign = "left"
             loadBlog(pageState.content)
     }
 }
