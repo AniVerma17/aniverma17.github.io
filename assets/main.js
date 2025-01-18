@@ -83,7 +83,7 @@ function loadBlog(content) {
                 blogPostsList = response.json()
                 return blogPostsList
             }
-        }) : new Promise((resolve, reject) => resolve(blogPostsList))
+        }) : new Promise((resolve, _) => resolve(blogPostsList))
     ).then(function (data) {
         if (content === undefined || content === null || content === "") {
             document.title = "Blog | AniVerma17"

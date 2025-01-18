@@ -7,9 +7,8 @@ Mobile application development at [Squareboat](https://squareboat.com)
 
 ## Skills
 
-- Full-stack development (LAMP, NodeJS) <progress value="100" />
+- Full-stack development <progress value="100" />
 - Android app development <progress value="100" />
-- RESTful APIs design/development <progress value="95" max="100" />
 - Reverse engineering <progress value="69" max="100" />
 - Cybersecurity <progress value="69" max="100" />
 - iOS app development <progress value="50" max="100" />
